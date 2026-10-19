@@ -1,0 +1,488 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #bd443b;
+    --primary-hover: #a53630;
+    --background: #faf7f1;
+    --surface: #ffffff;
+    --text: #382d2b;
+    --muted: #766c67;
+    --border: #e5dcd3;
+}
+
+body {
+    background-color: #f7f4ec;
+    color:#292722;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E5DACA;
+}
+
+.logo {
+    color: #7E2F1C;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 6px;
+    border: 1px solid #E5DACA;
+    background-color: white;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navigation a:hover {
+   text-decoration: underline;
+}
+
+.myrecipe,
+.trangchu,
+.account {
+    color: black;
+}
+
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+}
+
+.avt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #d7c8bc;
+    color: #7E2F1C;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 14px;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: bold;  
+}
+
+form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: none;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+.form-group > label,
+.form-group > legend {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    min-width: none;
+    min-height: 44px;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #ffffff;
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #bd443b40;
+    border-color: var(--primary);
+}
+
+.upload {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 24px;
+    border: 1px dashed #d7c8bc;
+    border-radius: 12px;
+    background: #ffffff;    
+}
+
+.img-preview {
+    flex: 0 0 40%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background: repeating-linear-gradient(135deg, #e7e4df 0px,
+                                                  #e7e4df 18px,
+                                                  #E5DACA 18px,
+                                                  #E5DACA 36px);
+    color: #766c67
+}
+
+.img-preview span {
+    font-size:  15px;
+}
+
+.upload-content {
+    flex: 1;
+    min-width: none;
+}
+
+.upload-content p {
+    padding:0 20px;
+    line-height: 1.75;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.upload-content article {
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.action {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.upload input[type="file"] {
+    min-height: auto;
+    border: none;
+    background: transparent;
+}
+
+.uploadIMG,
+.delete-image {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 12px 22px;
+    margin: 8px 16px;
+    border:1px solid #7E2F1C;
+    border-radius: 10px;
+    background: transparent;
+    color:#7E2F1C;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.uploadIMG:hover {
+    background: #fbefeb;
+}
+
+.delete-image {
+    border-color: #e5dcd3;
+    color: #514a48;
+    margin: 0;
+}
+
+.delete-image:hover {
+    background: #f5f0eb;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.categories {
+    border: none;
+    min-width: none;
+}
+
+.categories legend {
+    margin-bottom: 10px;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 24px;
+}
+
+.checkbox-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.checkbox-item input {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    accent-color: var(--primary);
+}
+
+.recipe-section {
+    margin-bottom: 24px;
+}
+
+.recipe-section h3 {
+    margin: 0 0 12px;
+}
+
+.box,
+.stepbox {
+    padding: 14px;
+    border: 1px solid #E5DACA;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.grid,
+.ingre-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px 100px;
+    gap: 10px 12px;
+}
+
+.ingre-header {
+    margin: 10px 0 10px;
+    padding: 0 4px;
+    color: #766c67;
+    font-size: 16px;
+}
+
+.grid input,
+.gridrow textarea {
+    width: 100%;
+    min-width: none;
+    padding: 12px;
+    font: inherit;
+    font-size: 18px;
+}
+
+.help {
+    margin: 8px 4px 0;
+    color: #766c67;
+    font-size: 15px;
+}
+
+.stepbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gridrow {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: start;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f1e9e2;
+    color: #a53630;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gridrow textarea {
+    min-height: 50px;
+    resize: vertical;
+}
+
+.recipe-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 0;
+}
+
+.recipe-actions button {
+    width: 100%;
+    min-height: 44px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: #7E2F1C;
+    color: #ffffff;
+    border: 1px solid #e5dcd3;
+}
+
+.btn-submit:hover {
+    background-color: #a63831;
+}
+
+.btn-cancel {
+    border: 1px solid #e5dcd3;
+    background: white;
+}
+
+.btn-cancel:hover {
+    background-color: #e5dcd3;
+}
+
+.form-note {
+    color:#766c67;
+    margin: 0;
+    font-size: 16px;
+}
+
+.form-note strong {
+    color:#925422;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+@media screen and (min-width: 360px) {
+    .navigation {
+        display: none;
+    }
+    .menu-button {
+        display: grid;
+    }
+    .upload{
+        padding: 12px;
+    }
+    .img-preview {
+        display: none;
+    }
+    .upload-content article {
+        display: none;
+    }
+    .delete-image {
+        display: none;
+    }
+    .checkbox-list {
+        display: grid;
+    }
+    .ingre-header {
+        display: none;
+    }
+    .form-note {
+        display: none;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .navigation {
+        display: flex;
+    }
+    .menu-button {
+        display: none;
+    }
+    .upload {
+        padding: 24px;
+    }
+    .img-preview {
+        display: flex;
+    }
+    .upload-content P {
+        display: none;
+    }
+    .upload-content article {
+        display: flex;
+        padding:0 20px;
+    }
+    .delete-image {
+        display: flex;
+    }
+    .wrap {
+        gap: 18px;
+    }
+    .checkbox-list {
+        display: flex;
+    }
+    .help {
+        display: none;
+    }
+    .ingre-header {
+        display: grid;
+    }
+    .btn-submit {
+        max-width: 240px;
+    }
+    .btn-cancel {
+        max-width: 90px;
+    }
+    .form-note {
+        display: flex;
+    }
+    .recipe-actions {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    .recipe-actions .btn-submit,
+    .recipe-actions .btn-cancel {
+        width: auto;
+        flex-shrink: 0;
+    }
+}

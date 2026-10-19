@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bếp Nhà</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header class="header">
+       <a href="index.html" class="logo">Bếp Nhà</a>
+    <button
+    class="menu-button"
+    id="menu-button"
+    type="button"
+    aria-label="Mở menu"
+    aria-expanded="false"
+    aria-controls="navigation">☰</button>  
+
+        <nav id="navigation"class="navigation">
+            <a href="index.html" class="trangchu">Trang Chủ</a>
+            <a href="myrecipe.html" class="myrecipe">Công thức của tôi</a>
+          <div class="client">
+            <span class=avt>L</span>
+            <a href="account.html" class="account">Chị Lan</a>
+          </div>
+        </nav>
+    </header>
+    
+
+    <main class="container">
+            <h2>Đăng công thức mới</h2>
+
+            <form>
+
+                <div class="form-group full">
+                    <label for="recipeName">Tên món</label>
+                    <input
+                    type="text"
+                    id="recipeName"
+                    name="recipeName"
+                    required>
+                </div>
+
+                <div class="form-group full">
+                    <label for="recipeImg">Ảnh đại diện</label>
+
+                    <div class="upload">
+                        <div class="img-preview">
+                            <span>Preview 4:3</span>    
+                        </div>
+                      <div class="upload-content">
+                        <p>
+                            Chọn một ảnh JPG hoặc PNG, tối đa 2 MB.
+                        </p>
+
+                        <article>JPG hoặc PNG, tối đa 2 MB. Ảnh sẽ được cắt theo khung 4:3 trên card.</article>
+                      
+                      <div class="action">
+                        <label for="recipeImg" class="uploadIMG">Chọn ảnh</label>
+
+                        <input
+                        type="file"
+                        id="recipeImg"
+                        name="recipeImg"
+                        accept=".jpg,.jpeg,.png"
+                        hidden>
+
+                        <button type="button" class="delete-image">Xóa ảnh</button>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="form-group full">
+                    <label for="description">Mô tả ngắn</label>
+
+                    <textarea
+                    id="description"
+                    name="description"
+                    rows="4"
+                    placeholder="Giới thiệu ngắn về món ăn"
+                    required>
+                    </textarea>
+                </div>
+            <div class="wrap">
+                <div class="form-group">
+                    <label for="preptime">Chuẩn bị (phút)</label>
+
+                    <input
+                    type="number"
+                    id="preptime"
+                    name="preptime"
+                    min="0"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cooktime">Nấu (phút)</label>
+
+                    <input
+                    type="number"
+                    id="cooktime"
+                    name="cooktime"
+                    min="0"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="servings">Khẩu phần</label>
+
+                    <input
+                    type="number"
+                    id="servings"
+                    name="servings"
+                    min="1"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty">Độ khó</label>
+
+                    <select id="difficulty" name="difficulty">
+                        <option value="easy">Dễ</option>
+                        <option value="medium">Trung bình</option>
+                        <option value="hard">Khó</option>
+                    </select>
+                </div>
+                </div>
+
+                <fieldset class="form-group full categories">
+                    <legend>Danh mục</legend>
+                 <div class="checkbox-list">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="categories" value="mon-viet">
+                        <span>Món Việt</span>
+                    </label>
+ 
+                     <label class="checkbox-item">
+                        <input type="checkbox" name="categories" value="mon-chay">
+                        <span>Món chay</span>
+                    </label>
+
+                     <label class="checkbox-item">
+                        <input type="checkbox" name="categories" value="mon-nhanh">
+                        <span>Món nhanh</span>
+                    </label>
+
+                     <label class="checkbox-item">
+                        <input type="checkbox" name="categories" value="do-uong">
+                        <span>Đồ uống</span>
+                    </label>
+
+                     <label class="checkbox-item">
+                        <input type="checkbox" name="categories" value="trang-mieng">
+                        <span>Tráng miệng</span>
+                    </label>
+                 </div>
+                </fieldset>
+
+                <section class="recipe-section">
+                        <h3>Nguyên liệu</h3>
+
+                        <div class="box">
+                            <div class="ingre-header">
+                                <span>Tên nguyên liệu</span>
+                                <span>Số lượng</span>
+                                <span>Đơn vị</span>
+                            </div>
+                         <div class="grid">
+                            <input type="text"
+                                   value="Bột gạo" aria-label="Tên nguyên liệu 1">
+                            <input type="number"
+                                   value="300" aria-label="Số lượng 1">
+                            <input type="text"
+                                   value="g" aria-label="Đơn vị 1">
+
+                            <input type="text"
+                                   aria-label="Tên nguyên liệu 2">
+                            <input type="number"
+                                   aria-label="Số lượng 2">
+                            <input type="text"
+                                   aria-label="Đơn vị 2">
+                            
+                            <input type="text"
+                                   aria-label="Tên nguyên liệu 3">
+                            <input type="number"
+                                   aria-label="Số lượng 3">
+                            <input type="text"
+                                   aria-label="Đơn vị 3">
+                         </div>
+                            <p class="help">Tên · số lượng · đơn vị</p>
+                        </div>
+                </section>
+
+                <section class="recipe-section">
+                    <h3>Các bước làm</h3>
+
+                    <div class="stepbox">
+                        <div class="gridrow">
+                            <span class="step-number">1</span>
+                            <textarea rows="3"
+                                      aria-label="Bước làm 1">Hòa bột với nước cốt dừa.</textarea>
+                        </div>
+
+                        <div class="gridrow">
+                            <span class="step-number">2</span>
+                            <textarea rows="3"
+                                      aria-label="Bước làm 2"></textarea>
+                        </div>
+
+                        <div class="gridrow">
+                            <span class="step-number">3</span>
+                            <textarea rows="3"
+                                      aria-label="Bước làm 3"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="recipe-actions">
+                    <button type="submit" class="btn-submit">
+                        Đăng công thức
+                    </button>
+
+                    <button type="reset" class="btn-cancel">
+                        Hủy
+                    </button>
+
+                    <p class="form-note">
+                       Công thức sẽ ở trạng thái
+                       <strong> Chờ duyệt </strong>
+                       cho tới khi admin duyệt.
+                    </p>
+                </div>
+            </form>
+    </main>
+</body>
+</html>
